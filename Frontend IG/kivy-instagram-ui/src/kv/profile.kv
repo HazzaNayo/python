@@ -1,0 +1,43 @@
+<attachment id="file:kivy-instagram-ui/src/kv/profile.kv">
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    Image:
+        source: 'path/to/profile_picture.png'
+        size_hint: (None, None)
+        size: (100, 100)
+        pos_hint: {'center_x': 0.5}
+
+    Label:
+        text: 'Username'
+        font_size: '24sp'
+        halign: 'center'
+        size_hint_y: None
+        height: self.texture_size[1]
+
+    Label:
+        text: 'Bio goes here. This is a short description about the user.'
+        font_size: '14sp'
+        halign: 'center'
+        size_hint_y: None
+        height: self.texture_size[1]
+
+    Button:
+        text: 'Edit Profile'
+        size_hint_y: None
+        height: '40dp'
+
+    ScrollView:
+        GridLayout:
+            id: posts_grid
+            cols: 3
+            row_default_height: '200dp'
+            row_force_default: True
+            spacing: 10
+            padding: 10
+
+            # Placeholder for post cards
+            # PostCard widgets will be added dynamically
+</attachment>

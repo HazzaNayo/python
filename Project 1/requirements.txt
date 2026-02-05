@@ -1,0 +1,3 @@
+kivy==2.2.1
+# If you use windows with wheels: pip install kivy[base] kivy_examples
+# For GPU/SDL backend variants, consult Kivy docs: https://kivy.org

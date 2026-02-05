@@ -1,0 +1,56 @@
+<attachment id="file:kivy-instagram-ui/kivy-instagram-ui/src/kv/widgets.kv">
+# Kivy language definitions for custom widgets
+
+<PostCard@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: self.minimum_height
+    padding: dp(10)
+    spacing: dp(5)
+
+    Image:
+        id: post_image
+        source: ''
+        size_hint_y: None
+        height: dp(200)
+
+    Label:
+        id: post_caption
+        text: ''
+        size_hint_y: None
+        height: self.texture_size[1] + dp(10)
+
+<StoryWidget@ScrollView>:
+    size_hint_y: None
+    height: dp(100)
+
+    GridLayout:
+        cols: None
+        row_default_height: dp(80)
+        row_force_default: True
+        size_hint_y: None
+        height: self.minimum_height
+
+        Image:
+            id: story_image
+            source: ''
+            size_hint_x: None
+            width: dp(80)
+
+<NavBar@BoxLayout>:
+    orientation: 'horizontal'
+    size_hint_y: None
+    height: dp(50)
+
+    Button:
+        text: 'Home'
+        on_release: app.root.current = 'home'
+
+    Button:
+        text: 'Explore'
+        on_release: app.root.current = 'explore'
+
+    Button:
+        text: 'Profile'
+        on_release: app.root.current = 'profile'
+</attachment>

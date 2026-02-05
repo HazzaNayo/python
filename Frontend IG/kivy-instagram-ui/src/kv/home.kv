@@ -1,0 +1,23 @@
+<attachment id="file:kivy-instagram-ui/kivy-instagram-ui/src/kv/home.kv">
+<contents>
+<HomeScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: 'assets/icons/logo.png'
+            size_hint_y: None
+            height: '50dp'
+
+        ScrollView:
+            GridLayout:
+                id: post_feed
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+
+        NavBar:
+            size_hint_y: None
+            height: '50dp'
+</contents>
+</attachment>
